@@ -5,6 +5,7 @@
  */
 
 #include "Memtrack.h"
+#include "MemtrackDeviceDmaHeap.h"
 #include "MemtrackDeviceIon.h"
 #include "MemtrackDeviceMali.h"
 #include "MemtrackDevicePvr.h"
@@ -32,6 +33,7 @@ bool MemtrackDevice::initializeDevice() {
 
 Memtrack::Memtrack() {
     addDevice<MemtrackDeviceIon>(MemtrackType::GRAPHICS);
+    addDevice<MemtrackDeviceDmaHeap>(MemtrackType::GRAPHICS);
     addDevice<MemtrackDeviceMali>(MemtrackType::GL);
     addDevice<MemtrackDevicePvr>(MemtrackType::GL);
 }

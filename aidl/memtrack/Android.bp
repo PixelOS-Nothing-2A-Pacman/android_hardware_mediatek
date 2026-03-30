@@ -18,6 +18,7 @@ cc_binary {
     srcs: [
         "Memtrack.cpp",
         "MemtrackDeviceIon.cpp",
+        "MemtrackDeviceDmaHeap.cpp",
         "MemtrackDevicePvr.cpp",
         "MemtrackDeviceMali.cpp",
         "main.cpp",
